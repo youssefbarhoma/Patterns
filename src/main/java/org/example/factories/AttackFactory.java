@@ -8,9 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class AttackFactory {
+public interface AttackFactory {
+    Attacks createAttack(int choice);
+    List<String> getAttacks();
+}
 
-    private final List<Attacks> attacks = new ArrayList<>();
+    /*private final List<Attacks> attacks = new ArrayList<>();
 
     public AttackFactory() {
         attacks.add(new SingleAttack());
@@ -33,5 +36,4 @@ public class AttackFactory {
 
     public List<Attacks> getAttacks() {
         return attacks;
-    }
-}
+    }*/

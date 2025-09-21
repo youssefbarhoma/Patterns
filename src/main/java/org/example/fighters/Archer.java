@@ -2,7 +2,9 @@ package org.example.fighters;
 
 import org.example.Display;
 import org.example.attacks.Attacks;
+import org.example.factories.ArcherAttackFactory;
 import org.example.factories.ArcherWeaponFactory;
+import org.example.factories.AttackFactory;
 import org.example.factories.WeaponFactory;
 
 public class Archer extends Fighter{
@@ -27,5 +29,9 @@ public class Archer extends Fighter{
     @Override
     public WeaponFactory getWeaponFactory() {
         return new ArcherWeaponFactory();
+    }
+    @Override
+    public AttackFactory getAttackFactory() {
+        return new ArcherAttackFactory();
     }
 }

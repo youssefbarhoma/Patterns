@@ -42,14 +42,12 @@ public class Display {
         return scanner.next().charAt(0);
     }
 
-    public int attackDisplay(Fighter f , List<Attacks> attacks){
-        System.out.println(f.getName() + " :Choose your way of attack");
-        int index = 1;
-        for (Attacks a : attacks) {
-            System.out.println(index + ". " + a.getName());
-            index++;
+    public int attackDisplay(Fighter f, List<String> attacks) {
+        System.out.println(f.getName() + " : Choose your way of attack");
+
+        for (int i = 0; i < attacks.size(); i++) {
+            System.out.println((i + 1) + ". " + attacks.get(i));
         }
-        i++;
         return scanner.nextInt();
     }
 
@@ -69,10 +67,10 @@ public class Display {
         return scanner.nextInt();
     }
 
-    public int checkCharge(int ch , Fighter f , Attacks a , List<Attacks> attack){
+    public int checkCharge(int ch , Fighter f , Attacks a , List<String> attacks){
         if (f.getCharge() < a.getCharge()) {
             System.out.println("You are out of charges, please select your Attack again");
-            ch = attackDisplay(f , attack);
+            ch = attackDisplay(f , attacks);
         }
         else if (f.getCharge() >= a.getCharge()) {
             f.subCharge(a);

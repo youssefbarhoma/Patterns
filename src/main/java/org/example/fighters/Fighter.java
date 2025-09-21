@@ -38,11 +38,11 @@ public abstract class Fighter {
     }
 
     public void addCharge(){
-        charge++;
+        this.charge+=1;
     }
 
     public void subCharge(Attacks a) {
-        charge-= a.getCharge();
+        this.charge-= a.getCharge();
     }
 
     public int getHealth() {

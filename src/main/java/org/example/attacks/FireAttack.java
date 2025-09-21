@@ -10,7 +10,7 @@ public class FireAttack implements Attacks{
 
     @Override
     public int getCharge() {
-        return 3;
+        return 2;
     }
     @Override
     public String getName() {

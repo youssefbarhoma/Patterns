@@ -10,7 +10,7 @@ public class SingleAttack implements Attacks {
 
     @Override
     public int getCharge() {
-        return 1;
+        return 0;
     }
     @Override
     public String getName() {

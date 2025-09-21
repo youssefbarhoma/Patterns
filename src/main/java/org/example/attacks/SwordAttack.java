@@ -10,7 +10,7 @@ public class SwordAttack implements Attacks{
 
     @Override
     public int getCharge() {
-        return 2;
+        return 1;
     }
     @Override
     public String getName() {

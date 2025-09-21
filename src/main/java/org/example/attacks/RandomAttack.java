@@ -11,7 +11,7 @@ public class RandomAttack implements Attacks{
 
     @Override
     public int getCharge() {
-        return 3;
+        return 2;
     }
 
     @Override
